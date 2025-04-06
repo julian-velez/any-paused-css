@@ -1,0 +1,32 @@
+body {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.box {
+    width: 360px;
+    height: 360px;
+    border-top: 45px solid orangered;
+    border-bottom: 45px solid orangered;
+    border-left: 45px solid orangered;
+    border-right: 45px solid orangered;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation-name: julian;
+    animation: julian 2s linear infinite;
+}
+
+@keyframes julian {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.box:hover {
+    animation-play-state: paused;
+}
